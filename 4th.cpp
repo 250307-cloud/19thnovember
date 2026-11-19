@@ -1,16 +1,6 @@
 #include <iostream>
 using namespace std;
 
-int countDiv(int n, int d);
-bool isThree(int n);
-
-int main() {
-    int n;
-    cin >> n;
-    cout << (isThree(n) ? "true" : "false") << '\n';
-    return 0;
-}
-
 int countDiv(int n, int d) {
     if (d == 0) {
         return 0;
@@ -26,3 +16,11 @@ int countDiv(int n, int d) {
 bool isThree(int n) {
     return countDiv(n, n) == 3;
 }
+
+int main() {
+    int n;
+    cin >> n;
+    cout << (isThree(n) ? "true" : "false") << '\n';
+    return 0;
+}
+
