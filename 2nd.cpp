@@ -1,17 +1,6 @@
 #include <iostream>
 using namespace std;
 
-int gcd(int a, int b);
-int countDivisors(int n, int divisor);
-int commonFactors(int a, int b);
-
-int main() {
-    int a, b;
-    cin >> a >> b;
-    cout << commonFactors(a, b) << '\n';
-    return 0;
-}
-
 int gcd(int a, int b) {
     if (b == 0) {
         return a;
@@ -35,4 +24,11 @@ int countDivisors(int n, int divisor) {
 int commonFactors(int a, int b) {
     int greatestCommonDivisor = gcd(a, b);
     return countDivisors(greatestCommonDivisor, greatestCommonDivisor);
+}
+
+int main() {
+    int a, b;
+    cin >> a >> b;
+    cout << commonFactors(a, b) << '\n';
+    return 0;
 }
